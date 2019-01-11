@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 MongoClient.connect(db.url, (err, database) => {
   if (err) return console.log(err)
   require('./app/routes')(app, database);
-  //bevestiging
+  //bevestiging van de poort
   app.listen(port, () => {
-    console.log('Poort ' + port + ' is nu live');
+    console.log('Poort ' + port + ' is nu draaiende');
   });               
 })
